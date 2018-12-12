@@ -1,4 +1,4 @@
-package com.example.adibhanafi.event4you;
+package com.example.adibhanafi.event4you.Other;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.example.adibhanafi.event4you.Activity.MainActivity;
+import com.example.adibhanafi.event4you.Fragment.PlaceOnMapFragment;
+import com.example.adibhanafi.event4you.R;
 import com.google.android.gms.location.places.Place;
 
 import java.util.List;
@@ -26,14 +29,14 @@ public class PlacesRecyclerViewAdapter extends
         placesList = list;
         context = ctx;
     }
+
     @Override
     public int getItemCount() {
         return placesList.size();
     }
 
     @Override
-    public PlacesRecyclerViewAdapter.ViewHolder
-    onCreateViewHolder(ViewGroup parent, int viewType) {
+    public PlacesRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.places_item, parent, false);
@@ -50,13 +53,14 @@ public class PlacesRecyclerViewAdapter extends
         holder.address.setText(place.getAddress());
         holder.phone.setText(place.getPhoneNumber());
 
-        if(place.getWebsiteUri() != null){
+        if (place.getWebsiteUri() != null) {
             holder.website.setText(place.getWebsiteUri().toString());
+            Log.d("Places", holder.website.getText().toString());
         }
 
-        if(place.getRating() > -1){
-            holder.ratingBar.setNumStars((int)place.getRating());
-        }else{
+        if (place.getRating() > -1) {
+            holder.ratingBar.setNumStars((int) place.getRating());
+        } else {
             holder.ratingBar.setVisibility(View.GONE);
         }
 
@@ -88,18 +92,16 @@ public class PlacesRecyclerViewAdapter extends
             phone = view.findViewById(R.id.phone);
             website = view.findViewById(R.id.website);
             ratingBar = view.findViewById(R.id.rating);
-
             viewOnMap = view.findViewById(R.id.view_map_b);
         }
     }
 
-    private void showOnMap(Place place){
-        FragmentManager fm = ((CurrentLocationNearByPlacesActivity)context)
-                .getSupportFragmentManager();
+    private void showOnMap(Place place) {
+        FragmentManager fm = ((MainActivity) context).getSupportFragmentManager();
 
-        Bundle bundle=new Bundle();
-        bundle.putString("name", (String)place.getName());
-        bundle.putString("address", (String)place.getAddress());
+        Bundle bundle = new Bundle();
+        bundle.putString("name", (String) place.getName());
+        bundle.putString("address", (String) place.getAddress());
         bundle.putDouble("lat", place.getLatLng().latitude);
         bundle.putDouble("lng", place.getLatLng().longitude);
 

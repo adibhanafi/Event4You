@@ -1,4 +1,4 @@
-package com.example.adibhanafi.event4you;
+package com.example.adibhanafi.event4you.Other;
 
 public class StateData {
 

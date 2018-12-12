@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/main_nev"
@@ -17,7 +17,7 @@
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@color/nev_item_color"
         app:itemTextColor="@color/nev_item_color"
-        app:menu="@menu/nev_items"></android.support.design.widget.BottomNavigationView>
+        app:menu="@menu/nev_items"/>
 
     <FrameLayout
         android:id="@+id/main_frame"

@@ -1,15 +1,15 @@
-package com.example.adibhanafi.event4you;
+package com.example.adibhanafi.event4you.Other;
 
-public class Event {
+public class EventData {
     private String name;
     private String date;
     private String address;
 
-    public Event () {
+    public EventData() {
         //empty constructor needed
     }
 
-    public Event(String name, String date, String address)
+    public EventData(String name, String date, String address)
     {
         this.name = name;
         this.date = date;

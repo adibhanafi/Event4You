@@ -1,23 +1,22 @@
-package com.example.adibhanafi.event4you;
+package com.example.adibhanafi.event4you.Fragment;
 
 
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.adibhanafi.event4you.R;
+import com.example.adibhanafi.event4you.Other.StateData;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -50,11 +49,10 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         homeView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        homeStateLists = homeView.findViewById(R.id.recyclerView);
+        homeStateLists = homeView.findViewById(R.id.recyclerViewHome);
         homeStateLists.setLayoutManager(new LinearLayoutManager(getContext()));
 
         stateRef = FirebaseDatabase.getInstance().getReference().child("State");
-
 
         return homeView;
     }
@@ -93,10 +91,7 @@ public class HomeFragment extends Fragment {
                 holder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                            setFragment(getContext(), StateFragment);
-
-
-
+                        setFragment(getContext(), StateFragment);
                     }
                 });
 
@@ -114,13 +109,8 @@ public class HomeFragment extends Fragment {
                 return viewHolder;
             }
         };
-
-
-
         homeStateLists.setAdapter(adapter);
         adapter.startListening();
-
-
     }
 
     private void setFragment(Context context, Fragment Fragment) {
@@ -128,22 +118,17 @@ public class HomeFragment extends Fragment {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         FragmentTransaction replace = fragmentTransaction.replace(R.id.main_frame, Fragment);
         fragmentTransaction.commit();
-
-
     }
 
     public static class StateViewHolder extends RecyclerView.ViewHolder {
         TextView stateName;
         View mView;
 
-
         public StateViewHolder(View itemView) {
             super(itemView);
 
             stateName = itemView.findViewById(R.id.text_view_state);
             mView = itemView;
-
         }
-
     }
 }

@@ -15,10 +15,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:fontFamily="serif"
             android:text="Adib Encem"
             android:textSize="15sp"
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </LinearLayout>
 </android.support.v7.widget.CardView>

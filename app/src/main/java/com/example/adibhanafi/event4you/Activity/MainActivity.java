@@ -1,4 +1,4 @@
-package com.example.adibhanafi.event4you;
+package com.example.adibhanafi.event4you.Activity;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -9,15 +9,21 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.adibhanafi.event4you.Fragment.CalendarFragment;
+import com.example.adibhanafi.event4you.Fragment.HomeFragment;
+import com.example.adibhanafi.event4you.Fragment.NearbyFragment;
+import com.example.adibhanafi.event4you.R;
+import com.example.adibhanafi.event4you.Fragment.StateFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView mMainNev;
     private FrameLayout mMainFrame;
 
-    private HomeFragment HomeFragment;
-    private StateFragment StateFragment;
-    private NearbyFragment NearbyFragment;
-    private CalendarFragment CalendarFragment;
+    private com.example.adibhanafi.event4you.Fragment.HomeFragment HomeFragment;
+    private com.example.adibhanafi.event4you.Fragment.StateFragment StateFragment;
+    private com.example.adibhanafi.event4you.Fragment.NearbyFragment NearbyFragment;
+    private com.example.adibhanafi.event4you.Fragment.CalendarFragment CalendarFragment;
 
 
     @Override

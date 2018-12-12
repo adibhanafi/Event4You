@@ -3,21 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StateFragment">
+    tools:context=".Fragment.StateFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/state_nev"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         />
+        android:layout_height="match_parent" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
-
-
+        android:id="@+id/recyclerViewState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </android.support.design.widget.CoordinatorLayout>

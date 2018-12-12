@@ -1,4 +1,4 @@
-package com.example.adibhanafi.event4you;
+package com.example.adibhanafi.event4you.Fragment;
 
 
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
 import android.widget.TextView;
+
+import com.example.adibhanafi.event4you.R;
 
 
 /**
