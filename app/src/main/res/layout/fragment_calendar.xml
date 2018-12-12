@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CalendarFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/calendar_nev"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="48dp"
+        android:text="Calendar"
+
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="48dp"
+        android:layout_width="300dp"
+        android:background="@drawable/bg_calendar"
+        android:layout_height="wrap_content">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </CalendarView>
+    </LinearLayout>
+
+    <Button
+        android:text="SAVE DATE"
+        android:background="@drawable/bg_button"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="34dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

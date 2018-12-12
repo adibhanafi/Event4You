@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nev_home"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_black_24dp"
+        android:title="Home"
+        android:visible="true" />
+    <item
+        android:id="@+id/nev_state"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/round_public_black_24dp"
+        android:title="Event List"
+        android:visible="true" />
+    <item
+        android:id="@+id/nev_nearby"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/round_near_me_black_24dp"
+        android:title="Nearby Places"
+        android:visible="true" />
+    <item
+        android:id="@+id/nev_calendar"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/round_calendar_today_black_24dp"
+        android:title="Calendar"
+        android:visible="true" />
+    <group />
+</menu>
